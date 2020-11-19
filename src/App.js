@@ -7,22 +7,29 @@ const OPTION_3 = 3;
 
 function App() {
   let bottomText;
-  switch(2) {case OPTION_1: bottomText = 'option 1'; case OPTION_2: bottomText = 'option 2'; case OPTION_3: bottomText = 'option 3'}
+  switch (2) {
+    case OPTION_1:
+      bottomText = 'option 1';
+      break;
+    case OPTION_2:
+      bottomText = 'option 2';
+      break;
+    case OPTION_3:
+      bottomText = 'option 3';
+      break;
+    default:
+      bottomText = 'option default';
+  }
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit
+          <code>src/App.js</code>
+          and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {bottomText}
       </header>
     </div>
   );
